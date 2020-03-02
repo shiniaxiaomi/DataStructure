@@ -23,6 +23,7 @@ public class ArrayList implements List {
     public void clearList() {
         //重新new一个数组即可
         array=new Object[size];
+        //长度清零
         this.length=0;
     }
 
@@ -77,7 +78,7 @@ public class ArrayList implements List {
             return -1;
         }
 
-        for(int i=0;i<this.array.length;i++){
+        for(int i=0;i<this.length;i++){
             if((int)this.array[i]==(int)o){
                 return i;
             }
@@ -87,8 +88,12 @@ public class ArrayList implements List {
     }
 
     @Override
-    public Object getElem(int i) {
-        return this.array[i];
+    public Object getElem(int index) throws Exception {
+        if(index<0 || index>length){
+            throw new Exception("超出范围");
+        }
+
+        return this.array[index];
     }
 
 

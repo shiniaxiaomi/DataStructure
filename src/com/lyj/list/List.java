@@ -13,7 +13,7 @@ public interface List {
     void insert(int index,Object o) throws Exception;
 
     //删除指定位置的数据
-    void delete(int index);
+    void delete(int index) throws Exception;
 
     boolean isEmpty();
 
@@ -21,5 +21,5 @@ public interface List {
 
     int locateElem(Object o);
 
-    Object getElem(int i);
+    Object getElem(int index) throws Exception;
 }
