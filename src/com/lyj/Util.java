@@ -1,4 +1,6 @@
-package com.lyj.list;
+package com.lyj;
+
+import com.lyj.list.List;
 
 public class Util {
 

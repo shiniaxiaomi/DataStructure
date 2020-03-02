@@ -1,5 +1,8 @@
 package com.lyj.list;
 
+/**
+ * 定义list接口
+ */
 public interface List {
 
     void init(int size);
